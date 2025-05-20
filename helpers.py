@@ -8,7 +8,12 @@ load_dotenv()
 TMDB_API_KEY = os.getenv("TMDB_API_KEY")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
+<<<<<<< HEAD
 client = OpenAI(api_key=OPENAI_API_KEY)
+=======
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+# client = OpenAI(api_key=OPENAI_API_KEY)
+>>>>>>> 7d60d38 (open AI changes)
 
 def search_tmdb(title, media_type):
     url = f"https://api.themoviedb.org/3/search/{media_type}"
