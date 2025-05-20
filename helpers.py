@@ -1,12 +1,15 @@
 import requests
 import os
 from dotenv import load_dotenv
-import openai
+from openai import OpenAI
 
 load_dotenv()
 
 TMDB_API_KEY = os.getenv("TMDB_API_KEY")
-openai.api_key = os.getenv("OPENAI_API_KEY")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+# client = OpenAI(api_key=OPENAI_API_KEY)
 
 def search_tmdb(title, media_type):
     url = f"https://api.themoviedb.org/3/search/{media_type}"
@@ -47,7 +50,7 @@ Respond ONLY in this JSON format:
 }}
     """.strip()
 
-    response = openai.ChatCompletion.create(
+    response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[{"role": "user", "content": prompt}],
         temperature=0.5,
