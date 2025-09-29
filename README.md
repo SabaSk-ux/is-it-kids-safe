@@ -17,6 +17,9 @@ It aims to provide a simple, parent-friendly dashboard for making viewing choice
 ## 🛠️ Tech Stack
 - **Python** (pandas, requests)  
 - **Streamlit** for the dashboard  
+
+- **NLP / keyword extraction** (basic)  
+=======
 - **NLP / keyword extraction** (basic)
 
 - ## 📂 Project Structure
@@ -48,5 +51,6 @@ Host live demo via Streamlit Cloud
 Saba Shaikh
 Aspiring Data Analyst | Python & SQL learner | Building projects to make tech useful for families
 LinkedIn : www.linkedin.com/in/saba-shaikh-data-analyst
+
 
 
